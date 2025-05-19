@@ -5,9 +5,13 @@ import cookieParser from "cookie-parser";
 export const app = express();
 
 const userOrigin =
-  process.env.USER_ORIGIN || "https://e-learn-front.vercel.app";
+  process.env.USER_ORIGIN ||
+  "https://e-learn-front.vercel.app" ||
+  "http://localhost:5173";
 const adminOrigin =
-  process.env.ADMIN_ORIGIN || "https://e-learn-admin.vercel.app";
+  process.env.ADMIN_ORIGIN ||
+  "https://e-learn-admin.vercel.app" ||
+  "http://localhost:5174";
 
 // Dynamic CORS config
 const allowedOrigins = [userOrigin, adminOrigin];
